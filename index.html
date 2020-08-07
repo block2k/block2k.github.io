@@ -2,102 +2,268 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Block</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="sheet/bootstrap.css">
-    <link rel="stylesheet" href="sheet/ionicons.min.css">
-    <link rel="stylesheet" href="sheet/mine.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
-    <script src="javascript/myscript.js"></script>
+  <title>Tính Xem Bao Nhiêu Điểm FE Thì Qua Môn?</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700|Roboto+Condensed:300,400,700">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <script src="cal.js"></script>
 </head>
 
 <body>
-    <div class="menu">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h3 class="py-3">About <span>Me</span></h3>
+  <div class="container">
+    <div class="row">
+      <div class="profile">
+        <div class="col-sm-8">
+          <div class="panel panel-default">
+            <div class="panel-body">
+
+              <div class="hienthi">
+                <div class="trai">
+                  <div class="input-group">
+                    <span class="input-group-addon">Age 1</span>
+                    <input type="number" id="diem1" class="form-control" placeholder="điểm thành phần 1">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">Age 2</span>
+                    <input type="number" id="diem2" class="form-control" placeholder="điểm thành phần 2">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">Age 3</span>
+                    <input type="number" id="diem3" class="form-control" placeholder="điểm thành phần 3">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">Age 4</span>
+                    <input type="number" id="diem4" class="form-control" placeholder="điểm thành phần 4">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">Age 5</span>
+                    <input type="number" id="diem5" class="form-control" placeholder="điểm thành phần 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">Age 6</span>
+                    <input type="number" id="diem6" class="form-control" placeholder="điểm thành phần 6">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">Age 7</span>
+                    <input type="number" id="diem7" class="form-control" placeholder="điểm thành phần 7">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">Age 8</span>
+                    <input type="number" id="diem8" class="form-control" placeholder="điểm thành phần 8">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">Age 9</span>
+                    <input type="number" id="diem9" class="form-control" placeholder="điểm thành phần 9">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">Age 10</span>
+                    <input type="number" id="diem10" class="form-control" placeholder="điểm thành phần 10">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">Age 11</span>
+                    <input type="number" id="diem11" class="form-control" placeholder="điểm thành phần 11">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">Age 12</span>
+                    <input type="number" id="diem12" class="form-control" placeholder="điểm thành phần 12">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">Age 13</span>
+                    <input type="number" id="diem13" class="form-control" placeholder="điểm thành phần 13">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">Age 14</span>
+                    <input type="number" id="diem14" class="form-control" placeholder="điểm thành phần 14">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">Age 15</span>
+                    <input type="number" id="diem15" class="form-control" placeholder="điểm thành phần 15">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">Age 16</span>
+                    <input type="number" id="diem16" class="form-control" placeholder="điểm thành phần 16">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">% FE</span>
+                    <input type="number" id="weightFE" class="form-control" placeholder="FE chiếm bao nhiêu %">
+                  </div>
+                  <br>
                 </div>
+                <div class="phai">
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight1" class="form-control"
+                      placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight2" class="form-control"
+                      placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight3" class="form-control"
+                      placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight4" class="form-control"
+                      placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight5" class="form-control"
+                      placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight6" class="form-control"
+                      placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight7" class="form-control"
+                      placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight8" class="form-control"
+                      placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight9" class="form-control"
+                      placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight10" class="form-control"
+                      placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight11" class="form-control"
+                      placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight12" class="form-control"
+                      placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight13" class="form-control"
+                      placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight14" class="form-control"
+                      placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight15" class="form-control"
+                      placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight16" class="form-control"
+                      placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                </div>
+              </div>
+
+              <div class="list-group" id="daura">
+                <a class="list-group-item active">Kết quả của bạn :</a>
+                <a class="list-group-item">Điểm FE cần đạt : <b id="ketqua"></b></a>
+                <a class="list-group-item">Trạng thái : <b id="lenlop"></b></a>
+              </div>
+
+              <center>
+                <button type="button" onclick="tinh()" id="tinhdiem" class="btn btn-primary">Tính điểm</button></center>
+
             </div>
+          </div>
         </div>
-    </div>
-
-    <div class="container" style="margin-top: 116px;">
-        <div class="row">
-            <div class="col-11 mx-auto profile">
-                <div class="py-3 px-2 px-lg-4 py-lg-5">
-
-                    <div class="row">
-                        <div class="avatarBox col-12 col-lg-5">
-                            <img src="img/3.png" class="img-fluid">
-                        </div>
-
-                        <div class="infoBox col-12 col-lg-6 mt-2 mt-lg-0">
-                            <p class="sayHi">Hello</p>
-
-                            <div class="name">
-                                <p><span>I'm</span> Đức Long</p>
-                                <p class="s">Verified
-                                    <span class="ion-ios-checkmark-outline"></span>
-                                </p>
-                                <p><span class="ion-android-globe"></span> block2k.github.io</p>
-                            </div>
-                            <hr>
-
-                            <div class="detailInfo">
-                                <div class="row my-2">
-                                    <div class="col-lg-4 col-12 boldd">Name</div>
-                                    <div class="col-lg-8 col-12 b">Đức Long</div>
-                                </div>
-                                <div class="row my-2">
-                                    <div class="col-lg-4 col-12 boldd">College</div>
-                                    <div class="col-lg-8 col-12 b">FPT University</div>
-                                </div>
-                                <div class="row my-2">
-                                    <div class="col-lg-4 col-12 boldd">Major</div>
-                                    <div class="col-lg-8 col-12 b">Software Engineering</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-4 col-12 boldd">Age</div>
-                                    <div class="col-lg-8 col-12 b">19 Years Old</div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
+      </div>
+      <div class="profile">
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="profile-sidebar">
+                <div class="profile-userpic">
+                  <img
+                    src="http://graph.facebook.com/100009519632712/picture?type=large&redirect=true&width=500&height=500"
+                    class="img-responsive" alt="" />
                 </div>
-            </div>
-            <div class="col-11 mx-auto bg-danger contact text-center">
-                <div class="social col-12">
-                    <!-- Facebook -->
-                    <a href="https://facebook.com/100009519632712" target="_blank">
-                        <span class="ion-social-facebook mr-4 mr-lg-5"></span>
-                    </a>
-                    <a href="https://www.instagram.com/block2kk/" target="_blank">
-                        <span class="ion-social-instagram-outline mr-4 mr-lg-5 ml-lg-3"></span>
-                    </a>
-                    <span class="ion-social-whatsapp-outline mr-4 mr-lg-5 ml-lg-3"></span>
-                    <span class="ion-social-skype-outline mr-4 mr-lg-5 ml-lg-3"></span>
-                    <span class="ion-social-twitter-outline mr-4 mr-lg-5 ml-lg-3"></span>
-                    <span class="ion-social-linkedin-outline ml-lg-3"></span>
+
+                <div class="profile-usertitle">
+                  <div class="profile-usertitle-name">
+                    Bùi Đức Long
+                  </div>
+                  <div class="profile-usertitle-job">
+                    HE140529
+                  </div>
                 </div>
+
+                <div class="profile-userbuttons">
+                  <a target="_blank" href="https://www.facebook.com/bl0ck2k"><button type="button"
+                      class="btn btn-success btn-sm">Facebook</button></a>
+                  <a target="_blank" href="https://www.messenger.com/t/bl0ck2k"><button type="button"
+                      class="btn btn-danger btn-sm">Gửi tin nhắn</button></a>
+                </div>
+                <div class="giaithich"><br><p>Nhập điểm (VALUE) ở bên trái và % điểm(WEIGHT) ở bên phải <br>
+                  Ví Dụ: <br> Progress test 1 	5.0 %	2	
+                  <br>
+                  Progress test 2	5.0 %	6 <br>thì nhập Age 1: 2 và %: 5 || Age 2: 6 và %: 5 <br>Bạn có bao nhiêu điểm thành phần thì nhập bấy nhiêu, bỏ trống các ô còn lại. Sau đó bấm
+                  "Tính điểm"
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+
 
 </body>
-<footer>
-    <div class="container-fluid mt-2">
-        <div class="row">
-            <div class="col-11 text-right">
-                <p class="license mr-lg-4 mr-0">
-                    <a href="https://block2k.github.io"></a>
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
 
 </html>
