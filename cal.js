@@ -50,7 +50,7 @@ function tinh() {
         hocky15 * percent15 / 100 +
         hocky16 * percent16 / 100)) / (fe / 100);
     if (diemtrungbinh < 4) {
-        document.getElementById("lenlop").innerHTML = "Điểm FE cần đạt là 4" + " đi thi khoanh vớ vẩn cũng được, không cần học!";
+        document.getElementById("lenlop").innerHTML = "Điểm FE cần đạt là 4" + ", đi thi khoanh vớ vẩn cũng được, không cần học!";
     } else if (diemtrungbinh >= 5 && diemtrungbinh < 7.0) {
         document.getElementById("lenlop").innerHTML = "Điểm FE cần đạt là " + diemtrungbinh.toFixed(1) + ", học key là làm được, không lo";
     } else if (diemtrungbinh >= 7 && diemtrungbinh < 8) {
@@ -113,7 +113,11 @@ function tinh() {
         swal("Thất bại !", "Vui lòng nhập đúng định dạng, điểm chỉ từ 0 - 10", "error");
         document.getElementById("daura").style.display = "none";
     } else {
+        if(diemtrungbinh < 4){
+            document.getElementById("ketqua").innerHTML = (4);
+        }else{
         document.getElementById("ketqua").innerHTML = (diemtrungbinh.toFixed(2));
+        }
         document.getElementById("daura").style.display = "block";
     }
 }
