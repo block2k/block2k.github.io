@@ -49,14 +49,14 @@ function tinh() {
         hocky14 * percent14 / 100 +
         hocky15 * percent15 / 100 +
         hocky16 * percent16 / 100)) / (fe / 100);
-    if (diemtrungbinh < 5) {
-        document.getElementById("lenlop").innerHTML = "Điểm FE cần đạt là " + diemtrungbinh.toFixed(1) + " tôi đi thi khoanh vớ vẩn cũng được, không cần học!";
+    if (diemtrungbinh < 4) {
+        document.getElementById("lenlop").innerHTML = "Điểm FE cần đạt là 4" + " đi thi khoanh vớ vẩn cũng được, không cần học!";
     } else if (diemtrungbinh >= 5 && diemtrungbinh < 7.0) {
-        document.getElementById("lenlop").innerHTML = "Điểm FE cần đạt là " + diemtrungbinh.toFixed(1) + ", điểm này học key là làm được, không lo";
+        document.getElementById("lenlop").innerHTML = "Điểm FE cần đạt là " + diemtrungbinh.toFixed(1) + ", học key là làm được, không lo";
     } else if (diemtrungbinh >= 7 && diemtrungbinh < 8) {
-        document.getElementById("lenlop").innerHTML = "Điểm FE cần đạt là " + diemtrungbinh.toFixed(1) + ", điểm này key sát trúng thì chắc là qua, không thì gãy";
+        document.getElementById("lenlop").innerHTML = "Điểm FE cần đạt là " + diemtrungbinh.toFixed(1) + ", cố gắng nha bạn ơi ^_^";
     } else if (diemtrungbinh >= 8 && diemtrungbinh <= 10) {
-        document.getElementById("lenlop").innerHTML = "Điểm FE cần đạt là " + diemtrungbinh.toFixed(1) + ", như này thì tốt nhất vào game làm vài ván rồi alo bố mẹ xin tiền học lại. Khó của Nam Cường";
+        document.getElementById("lenlop").innerHTML = "Điểm FE cần đạt là " + diemtrungbinh.toFixed(1) + ", thôi như này 90% là học rồi :(";
         swal("Wow !", "Đăng ký luôn BLOC5 đi, " + diemtrungbinh.toFixed(1) + " mới pass thì gãy rồi", "success");
     }
     if (hocky1 > 10 || hocky1 < 0) {
