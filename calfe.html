@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Block</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        .row.content {
+            height: 1500px
+        }
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700|Roboto+Condensed:300,400,700">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="tinhdiemfe/style.css" type="text/css" rel="stylesheet">
+    <script src="tinhdiemfe/cal.js"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h4>Kỹ thuật phần mềm</h4>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="calfe.html">Tính Điểm FE</a></li>
+                    <li><a href="ky1.html">Kỳ 1</a></li>
+                    <li><a href="ky2.html">Kỳ 2</a></li>
+                    <li><a href="index.html">Kỳ 3</a></li>
+
+                </ul><br>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search..">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="profile">
+                        <div class="col-sm-8">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+
+                                    <div class="hienthi">
+                                        <div class="trai">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Grage ITEM 1</span>
+                                                <input type="number" id="diem1" class="form-control"
+                                                    placeholder="điểm thành phần 1">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Grage ITEM 2</span>
+                                                <input type="number" id="diem2" class="form-control"
+                                                    placeholder="điểm thành phần 2">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Grage ITEM 3</span>
+                                                <input type="number" id="diem3" class="form-control"
+                                                    placeholder="điểm thành phần 3">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Grage ITEM 4</span>
+                                                <input type="number" id="diem4" class="form-control"
+                                                    placeholder="điểm thành phần 4">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Grage ITEM 5</span>
+                                                <input type="number" id="diem5" class="form-control"
+                                                    placeholder="điểm thành phần 5">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Grage ITEM 6</span>
+                                                <input type="number" id="diem6" class="form-control"
+                                                    placeholder="điểm thành phần 6">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Grage ITEM 7</span>
+                                                <input type="number" id="diem7" class="form-control"
+                                                    placeholder="điểm thành phần 7">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Grage ITEM 8</span>
+                                                <input type="number" id="diem8" class="form-control"
+                                                    placeholder="điểm thành phần 8">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Grage ITEM 9</span>
+                                                <input type="number" id="diem9" class="form-control"
+                                                    placeholder="điểm thành phần 9">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Grage ITEM 10</span>
+                                                <input type="number" id="diem10" class="form-control"
+                                                    placeholder="điểm thành phần 10">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Grage ITEM 11</span>
+                                                <input type="number" id="diem11" class="form-control"
+                                                    placeholder="điểm thành phần 11">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Grage ITEM 12</span>
+                                                <input type="number" id="diem12" class="form-control"
+                                                    placeholder="điểm thành phần 12">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Grage ITEM 13</span>
+                                                <input type="number" id="diem13" class="form-control"
+                                                    placeholder="điểm thành phần 13">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Grage ITEM 14</span>
+                                                <input type="number" id="diem14" class="form-control"
+                                                    placeholder="điểm thành phần 14">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Grage ITEM 15</span>
+                                                <input type="number" id="diem15" class="form-control"
+                                                    placeholder="điểm thành phần 15">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Grage ITEM 16</span>
+                                                <input type="number" id="diem16" class="form-control"
+                                                    placeholder="điểm thành phần 16">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">% FE</span>
+                                                <input type="number" id="weightFE" class="form-control"
+                                                    placeholder="FE chiếm bao nhiêu %">
+                                            </div>
+                                            <br>
+                                        </div>
+                                        <div class="phai">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">%</span>
+                                                <input type="number" id="weight1" class="form-control"
+                                                    placeholder="VD: 5% thì nhập 5">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">%</span>
+                                                <input type="number" id="weight2" class="form-control"
+                                                    placeholder="VD: 5% thì nhập 5">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">%</span>
+                                                <input type="number" id="weight3" class="form-control"
+                                                    placeholder="VD: 5% thì nhập 5">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">%</span>
+                                                <input type="number" id="weight4" class="form-control"
+                                                    placeholder="VD: 5% thì nhập 5">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">%</span>
+                                                <input type="number" id="weight5" class="form-control"
+                                                    placeholder="VD: 5% thì nhập 5">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">%</span>
+                                                <input type="number" id="weight6" class="form-control"
+                                                    placeholder="VD: 5% thì nhập 5">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">%</span>
+                                                <input type="number" id="weight7" class="form-control"
+                                                    placeholder="VD: 5% thì nhập 5">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">%</span>
+                                                <input type="number" id="weight8" class="form-control"
+                                                    placeholder="VD: 5% thì nhập 5">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">%</span>
+                                                <input type="number" id="weight9" class="form-control"
+                                                    placeholder="VD: 5% thì nhập 5">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">%</span>
+                                                <input type="number" id="weight10" class="form-control"
+                                                    placeholder="VD: 5% thì nhập 5">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">%</span>
+                                                <input type="number" id="weight11" class="form-control"
+                                                    placeholder="VD: 5% thì nhập 5">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">%</span>
+                                                <input type="number" id="weight12" class="form-control"
+                                                    placeholder="VD: 5% thì nhập 5">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">%</span>
+                                                <input type="number" id="weight13" class="form-control"
+                                                    placeholder="VD: 5% thì nhập 5">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">%</span>
+                                                <input type="number" id="weight14" class="form-control"
+                                                    placeholder="VD: 5% thì nhập 5">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">%</span>
+                                                <input type="number" id="weight15" class="form-control"
+                                                    placeholder="VD: 5% thì nhập 5">
+                                            </div>
+                                            <br>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">%</span>
+                                                <input type="number" id="weight16" class="form-control"
+                                                    placeholder="VD: 5% thì nhập 5">
+                                            </div>
+                                            <br>
+                                        </div>
+                                    </div>
+
+                                    <div class="list-group" id="daura">
+                                        <a class="list-group-item active">Kết quả của bạn :</a>
+                                        <a class="list-group-item">Điểm FE cần đạt : <b id="ketqua"></b></a>
+                                        <a class="list-group-item">Trạng thái : <b id="lenlop"></b></a>
+                                    </div>
+
+                                    <center>
+                                        <button type="button" onclick="tinh()" id="tinhdiem"
+                                            class="btn btn-primary">Tính điểm</button></center>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               
+                </div>
+            </div>
+        </div>
+
+        <footer class="container-fluid">
+            <p style="text-align: center;"> FPT HỌC THẬT, THI THẬT, THÀNH CÔNG THẬT</p>
+        </footer>
+
+</body>
+
+</html>
