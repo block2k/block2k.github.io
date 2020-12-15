@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Tính Xem Bao Nhiêu Điểm FE Thì Qua Môn?</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700|Roboto+Condensed:300,400,700">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <script src="cal.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="profile">
+        <div class="col-sm-8">
+          <div class="panel panel-default">
+            <div class="panel-body">
+
+              <div class="hienthi">
+                <div class="trai">
+                  <div class="input-group">
+                    <span class="input-group-addon">VALUE 1</span>
+                    <input type="number" id="diem1" class="form-control" placeholder="điểm thành phần 1">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">VALUE 2</span>
+                    <input type="number" id="diem2" class="form-control" placeholder="điểm thành phần 2">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">VALUE 3</span>
+                    <input type="number" id="diem3" class="form-control" placeholder="điểm thành phần 3">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">VALUE 4</span>
+                    <input type="number" id="diem4" class="form-control" placeholder="điểm thành phần 4">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">VALUE 5</span>
+                    <input type="number" id="diem5" class="form-control" placeholder="điểm thành phần 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">VALUE 6</span>
+                    <input type="number" id="diem6" class="form-control" placeholder="điểm thành phần 6">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">VALUE 7</span>
+                    <input type="number" id="diem7" class="form-control" placeholder="điểm thành phần 7">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">VALUE 8</span>
+                    <input type="number" id="diem8" class="form-control" placeholder="điểm thành phần 8">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">VALUE 9</span>
+                    <input type="number" id="diem9" class="form-control" placeholder="điểm thành phần 9">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">VALUE 10</span>
+                    <input type="number" id="diem10" class="form-control" placeholder="điểm thành phần 10">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">VALUE 11</span>
+                    <input type="number" id="diem11" class="form-control" placeholder="điểm thành phần 11">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">VALUE 12</span>
+                    <input type="number" id="diem12" class="form-control" placeholder="điểm thành phần 12">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">VALUE 13</span>
+                    <input type="number" id="diem13" class="form-control" placeholder="điểm thành phần 13">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">VALUE 14</span>
+                    <input type="number" id="diem14" class="form-control" placeholder="điểm thành phần 14">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">VALUE 15</span>
+                    <input type="number" id="diem15" class="form-control" placeholder="điểm thành phần 15">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">VALUE 16</span>
+                    <input type="number" id="diem16" class="form-control" placeholder="điểm thành phần 16">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">% FE</span>
+                    <input type="number" id="weightFE" class="form-control" placeholder="% điểm FE. 30% thì nhập 30">
+                  </div>
+                  <br>
+                </div>
+                <div class="phai">
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight1" class="form-control" placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight2" class="form-control" placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight3" class="form-control" placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight4" class="form-control" placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight5" class="form-control" placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight6" class="form-control" placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight7" class="form-control" placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight8" class="form-control" placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight9" class="form-control" placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight10" class="form-control" placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight11" class="form-control" placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight12" class="form-control" placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight13" class="form-control" placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight14" class="form-control" placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight15" class="form-control" placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                  <div class="input-group">
+                    <span class="input-group-addon">%</span>
+                    <input type="number" id="weight16" class="form-control" placeholder="VD: 5% thì nhập 5">
+                  </div>
+                  <br>
+                </div>
+              </div>
+
+              <div class="list-group" id="daura">
+                <a class="list-group-item active">Kết quả của bạn :</a>
+                <a class="list-group-item">Điểm FE cần đạt : <b id="ketqua"></b></a>
+                <a class="list-group-item">Trạng thái : <b id="lenlop"></b></a>
+              </div>
+
+              <center>
+                <button type="button" onclick="tinh()" id="tinhdiem" class="btn btn-primary">Tính điểm</button>
+              </center>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="profile-sidebar">
+                <div class="profile-userpic">
+                  <img
+                    src="http://graph.facebook.com/100009519632712/picture?type=large&redirect=true&width=500&height=500"
+                    class="img-responsive" alt="" />
+                </div>
+
+                <div class="profile-usertitle">
+                  <div class="profile-usertitle-name">
+                    Bùi Đức Long
+                  </div>
+                  <div class="profile-usertitle-job">
+                    HE140529
+                  </div>
+                </div>
+
+                <div class="profile-userbuttons">
+                  <a target="_blank" href="https://www.facebook.com/bl0ck2k"><button type="button"
+                      class="btn btn-success btn-sm">Facebook</button></a>
+                  <a target="_blank" href="https://www.messenger.com/t/bl0ck2k"><button type="button"
+                      class="btn btn-danger btn-sm">Gửi tin nhắn</button></a>
+                </div>
+                <div class="giaithich">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
