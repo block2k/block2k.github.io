@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính FE</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style/style.css">
+    <script>
+        $(document).on("change", "#nhapdiem", function () {
+            $("tbody").append(
+                "<tr> <td> <div class=\"input-group\"> <span class=\"input-group-addon\">Điểm </span> <input type=\"number\" min=\"0\" max=\"10\" class=\"form-control\" id=\"nhapdiem\" placeholder=\"điểm thành phần\"> </div> </td> <td> <div class=\"input-group\"> <span class=\"input-group-addon\">% </span> <input type=\"number\" min=\"0\" max=\"100\" class=\"form-control\" oninput=\"getFE()\" placeholder=\"15\"> </div> </td> </tr>"
+            );
+        });
+    </script>
+</head>
+
+<body>
+    <div class="panel panel-primary">
+        <div class="panel-heading text-center">
+            <p style="font-size: 20px;margin-bottom: 0px">TÍNH ĐIỂM FE</p>
+        </div>
+        <div class="panel-body1">
+            <div class="tab-content mgt20">
+                <div class="tab-pane fade active in" id="dropdown1">
+                    <table id="bang1">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group"> <span class="input-group-addon">Điểm </span>
+                                        <input type="number" min="0" max="10" class="form-control" id="nhapdiem"
+                                            placeholder="điểm thành phần">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group"> <span class="input-group-addon">% </span> <input
+                                            type="number" min="0" max="100" class="form-control" oninput="getFE()"
+                                            placeholder="15">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>
+                                    <div class="input-group"> <span class="input-group-addon">% FE
+                                        </span> <input id="percentFE" type="number" min="0" max="100"
+                                            class="form-control" placeholder="40"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="input-group"> <span class="input-group-addon">Điểm trung bình muốn
+                                            đạt
+                                        </span> <input id="tartgetscore" type="number" min="0" max="10"
+                                            class="form-control" value="5"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4 id="result">FE cần đạt:</span></h4>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <button type="submit" class="btn btn-success btn-block" onclick="calculateGrade()"
+                        data-toggle="modal" data-target="#tinhxuoi0gdtx">Tính</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function getFE() {
+            let allInput = document.querySelectorAll('tbody tr');
+            var percentFE = 100;
+            for (let i = 0; i < allInput.length; i++) {
+                let element = allInput[i];
+                let percent = ($(element).children("td").children("div").children("input")[1].value);
+                percentFE -= percent;
+            }
+            document.getElementById("percentFE").value = percentFE;
+        }
+        function calculateGrade() {
+            let allInput = document.querySelectorAll('tbody tr');
+            var target = document.getElementById('tartgetscore').value;
+            var percentFE = document.getElementById('percentFE').value / 100;
+            let total = 0;
+            for (let i = 0; i < allInput.length; i++) {
+                let element = allInput[i];
+                let percent = ($(element).children("td").children("div").children("input")[1].value) / 100;
+                let diem = $(element).children("td").children("div").children("input")[0].value * 1;
+                total += diem * percent;
+            }
+            console.log(total);
+            var diemtrungbinh = (target - (total)) / percentFE;
+            document.getElementById('result').innerHTML = "FE cần đạt: " + diemtrungbinh.toFixed(2);
+        };
+    </script>
+</body>
+
+</html>
