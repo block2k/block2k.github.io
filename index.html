@@ -1,174 +1,202 @@
 <!DOCTYPE html>
 <html>
-<title>Block</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
+  <title>Block</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <style>
     .w3-theme {
-        color: #fff !important;
-        background-color: #4CAF50 !important
+      color: #fff !important;
+      background-color: #4caf50 !important;
     }
 
     .w3-btn {
-        background-color: #4CAF50;
-        margin-bottom: 4px
+      background-color: #4caf50;
+      margin-bottom: 4px;
     }
 
     .w3-code {
-        border-left: 4px solid #4CAF50
+      border-left: 4px solid #4caf50;
     }
 
     .myMenu {
-        margin-bottom: 150px
+      margin-bottom: 150px;
     }
-</style>
-<script>
+  </style>
+  <script>
     function includeHTML() {
-        var z, i, elmnt, file, xhttp;
-        /*loop through a collection of all HTML elements:*/
-        z = document.getElementsByTagName("*");
-        for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-                /*make an HTTP request using the attribute value as the file name:*/
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function () {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                        if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                        /*remove the attribute, and call this function once more:*/
-                        elmnt.removeAttribute("w3-include-html");
-                        includeHTML();
-                    }
-                }
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                /*exit the function:*/
-                return;
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+              if (this.status == 200) {
+                elmnt.innerHTML = this.responseText;
+              }
+              if (this.status == 404) {
+                elmnt.innerHTML = "Page not found.";
+              }
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
             }
+          };
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
         }
-    };
-</script>
+      }
+    }
+  </script>
 
-<body>
-
+  <body>
     <div w3-include-html="header.html"></div>
     <!-- Main content: shift it to the right by 270 pixels when the sidebar is visible -->
-    <div class="w3-main w3-container" style="margin-left:270px;margin-top:117px;">
-
-        <!-- content -->
-        <div class="w3-panel w3-padding-large w3-card-4 w3-light-grey">
-            <h1 class="w3-jumbo">PRJ321</h1>
-            <p class="w3-xlarge">Web-Based Java Applications</p>
-            <p class="w3-large">
-            <p>
-            <div class="w3-code cssHigh notranslate">
-                <table>
-                    <tr>
-                        <td>
-                            <li>
-                                Project
-                            </li>
-                        </td>
-                        <td>
-                            <a href="https://drive.google.com/drive/folders/1T_8NLxHuHzfyh0AN9XXEgtWMGNZEEtRz?usp=sharing"
-                                target="_blank" class="w3-tag w3-teal">View</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <li>
-                                Practice Exam: Tổng hợp các đề PE
-
-                            </li>
-                        </td>
-                        <td>
-                            <a href="https://drive.google.com/drive/folders/1hAPixsyxWsQcG8g5Rs5PTSXwF7ql0wBK?usp=sharing"
-                                target="_blank" class="w3-tag w3-teal">View</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <li>
-                                Final Exam:
-                                <br>
-                                - Đề FE (4/2021)
-                                <a href="https://drive.google.com/file/d/17tP67V-n9k4eST2yZ4VtRGfei1-YwQpV/view"
-                                    target="_blank" class="w3-tag w3-teal">View</a>
-                                <br>
-                                - Key:
-                                <a href="https://quizlet.com/vn/550458286/prj321-java-web-flash-cards/?x=1qqt"
-                                    target="_blank" class="w3-tag w3-teal">View</a>
-                            </li>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+    <div
+      class="w3-main w3-container"
+      style="margin-left: 270px; margin-top: 117px"
+    >
+      <!-- content -->
+      <div class="w3-panel w3-padding-large w3-card-4 w3-light-grey">
+        <h1 class="w3-jumbo">PRJ321</h1>
+        <p class="w3-xlarge">Web-Based Java Applications</p>
+        <p class="w3-large"></p>
+        <p></p>
+        <div class="w3-code cssHigh notranslate">
+          <table>
+            <tr>
+              <td>
+                <li>Project</li>
+              </td>
+              <td>
+                <a
+                  href="https://drive.google.com/drive/folders/1T_8NLxHuHzfyh0AN9XXEgtWMGNZEEtRz?usp=sharing"
+                  target="_blank"
+                  class="w3-tag w3-teal"
+                  >View</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <li>Practice Exam: Tổng hợp các đề PE</li>
+              </td>
+              <td>
+                <a
+                  href="https://drive.google.com/drive/folders/1hAPixsyxWsQcG8g5Rs5PTSXwF7ql0wBK?usp=sharing"
+                  target="_blank"
+                  class="w3-tag w3-teal"
+                  >View</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <li>
+                  Final Exam:
+                  <br />
+                  - Đề FE (4/2021)
+                  <a
+                    href="https://drive.google.com/file/d/17tP67V-n9k4eST2yZ4VtRGfei1-YwQpV/view"
+                    target="_blank"
+                    class="w3-tag w3-teal"
+                    >View</a
+                  >
+                  <br />
+                  - Key:
+                  <a
+                    href="https://quizlet.com/vn/550458286/prj321-java-web-flash-cards/?x=1qqt"
+                    target="_blank"
+                    class="w3-tag w3-teal"
+                    >View</a
+                  >
+                </li>
+              </td>
+            </tr>
+          </table>
         </div>
+      </div>
 
-        <div class="w3-panel w3-padding-large w3-card-4 w3-light-grey">
-            <h1 class="w3-jumbo">LAB231</h1>
-            <p class="w3-xlarge">Web Java Lab</p>
-            <p class="w3-large">
-            <p>
-            <div class="w3-code cssHigh notranslate">
-                <ul>
-                    <li>
-                        List Các Bài Lab Web: Digital News, Manage Timetable, Photographer, Student Request
-                        <a href="https://drive.google.com/drive/folders/1Vd7gRpg6MO-v1cW35vlt3nRAxAYyhMPV?usp=sharing"
-                            target="_blank" class="w3-tag w3-teal">View</a>
-                    </li>
-
-                </ul>
-            </div>
+      <div class="w3-panel w3-padding-large w3-card-4 w3-light-grey">
+        <h1 class="w3-jumbo">LAB231</h1>
+        <p class="w3-xlarge">Web Java Lab</p>
+        <p class="w3-large"></p>
+        <p></p>
+        <div class="w3-code cssHigh notranslate">
+          <ul>
+            <li>
+              List Các Bài Lab Web: Digital News, Manage Timetable,
+              Photographer, Student Request
+              <a
+                href="https://drive.google.com/drive/folders/1Vd7gRpg6MO-v1cW35vlt3nRAxAYyhMPV?usp=sharing"
+                target="_blank"
+                class="w3-tag w3-teal"
+                >View</a
+              >
+            </li>
+          </ul>
         </div>
-        <!-- content -->
+      </div>
+      <!-- content -->
 
-        <!-- footer -->
-        <div w3-include-html="footer.html"></div>
-        <!-- footer -->
+      <!-- footer -->
+      <div w3-include-html="footer.html"></div>
+      <!-- footer -->
 
-        <!-- đếm view page -->
-        <div id="sfcatnl59w9xwr3pp358g8ejwzs1te1bxz7"></div>
-        <script type="text/javascript"
-            src="https://counter10.stat.ovh/private/counter.js?c=atnl59w9xwr3pp358g8ejwzs1te1bxz7&down=async"
-            async></script><noscript><a href="https://www.freecounterstat.com" title="free website counter code"><img
-                    src="https://counter10.stat.ovh/private/freecounterstat.php?c=atnl59w9xwr3pp358g8ejwzs1te1bxz7"
-                    title="free website counter code" alt="free website counter code"></a></noscript>
-        <!-- đếm view page -->
-        <!-- END MAIN -->
+      <!-- đếm view page -->
+      <div id="sfcatnl59w9xwr3pp358g8ejwzs1te1bxz7"></div>
+      <script
+        type="text/javascript"
+        src="https://counter10.stat.ovh/private/counter.js?c=atnl59w9xwr3pp358g8ejwzs1te1bxz7&down=async"
+        async
+      ></script>
+      <noscript
+        ><a
+          href="https://www.freecounterstat.com"
+          title="free website counter code"
+          ><img
+            src="https://counter10.stat.ovh/private/freecounterstat.php?c=atnl59w9xwr3pp358g8ejwzs1te1bxz7"
+            title="free website counter code"
+            alt="free website counter code" /></a
+      ></noscript>
+      <!-- đếm view page -->
+      <!-- END MAIN -->
     </div>
 
     <script>
-        // Script to open and close the sidebar
-        function w3_open() {
-            document.getElementById("mySidebar").style.display = "block";
-            document.getElementById("myOverlay").style.display = "block";
-        }
+      // Script to open and close the sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
 
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
-            document.getElementById("myOverlay").style.display = "none";
-        }
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
 
-        function w3_show_nav(name) {
-            document.getElementById("menuTut").style.display = "none";
-            document.getElementById("menuRef").style.display = "none";
-            document.getElementById(name).style.display = "block";
-            w3 - open();
-        }
+      function w3_show_nav(name) {
+        document.getElementById("menuTut").style.display = "none";
+        document.getElementById("menuRef").style.display = "none";
+        document.getElementById(name).style.display = "block";
+        w3 - open();
+      }
     </script>
 
     <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
 
     <script>
-        w3CodeColor();
+      w3CodeColor();
     </script>
     <script>
-        includeHTML();
+      includeHTML();
     </script>
-</body>
-
+  </body>
 </html>
