@@ -217,7 +217,7 @@ A: Yes. We take data privacy seriously and comply with all data protection regul
 A registered non-profit organization dedicated to transforming lives through education, skills development, and humanitarian support.
 
 **Contact Information:**
-- Email: info@ocheikwufoundation.org
+- Email: ocheikwu@ocheikwuempowerment.name.ng
 - Address: 20, Behind Primary Health Center, Zakeri Angulu Street, Tunga-Maje, FCT, Abuja, Nigeria
 - Registration: RC 8206353
 

@@ -255,7 +255,7 @@ Inspirational quote about contribution impact
 - Humanitarian Aid
 
 ### Contact Info
-- 📧 info@ocheikwufoundation.org
+- 📧 ocheikwu@ocheikwuempowerment.name.ng
 - 📍 20, Behind Primary Health Center, Zakeri Angulu Street, Tunga-Maje, FCT, Abuja, Nigeria
 - Registration: RC 8206353 ✅
 
@@ -407,7 +407,7 @@ If you need to make content changes:
 2. **Stay Consistent**: Ensure information matches across all pages and official documents
 3. **Update Regularly**: Keep impact statistics and content current
 4. **Document Everything**: Keep records of all claims (beneficiaries, partners, impact)
-5. **Professional Email**: Ensure info@ocheikwufoundation.org is active and professional
+5. **Professional Email**: Ensure ocheikwu@ocheikwuempowerment.name.ng is active and professional
 6. **Response Ready**: Be prepared to provide supporting documents if requested
 
 ---
