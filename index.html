@@ -1,278 +1,747 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AYUBA FADDAH SOLID FOUNDATION - Supporting education for underprivileged children in Nigeria. Providing classroom spaces, educational materials, and school enrollment support.">
-    <meta name="keywords" content="nonprofit, education, Nigeria, children, charity, underprivileged, school support, educational materials">
-    <meta name="author" content="AYUBA FADDAH SOLID FOUNDATION">
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="AYUBA FADDAH SOLID FOUNDATION – Supporting Education for Children in Nigeria">
-    <meta property="og:description" content="Providing classroom spaces, educational materials, and school enrollment support for underprivileged children in Nigeria.">
-    <meta property="og:type" content="website">
-    
-    <title>AYUBA FADDAH SOLID FOUNDATION – Supporting Education for Children in Nigeria</title>
-    
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <title>THE ROCK FOUNDATION SCHOOLS OBUDU LTD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="The Rock Foundation Schools Obudu Ltd – a nonprofit organization in Nigeria providing education support, school fees assistance, and learning opportunities for children from low-income families." />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        body {
+            color: #111827;
+            background-color: #f9fafb;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(249, 250, 251, 0.94);
+            border-bottom: 1px solid #e5e7eb;
+            backdrop-filter: blur(10px);
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+        }
+
+        .logo {
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: #1d4ed8;
+        }
+
+        .logo span {
+            color: #111827;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a {
+            color: #4b5563;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #111827;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            padding: 0.6rem 1.4rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1d4ed8, #2563eb);
+            color: #f9fafb;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 14px 34px rgba(37, 99, 235, 0.45);
+        }
+
+        .btn-outline {
+            border: 1px solid #d1d5db;
+            background: #ffffff;
+            color: #111827;
+        }
+
+        .btn-outline:hover {
+            background: #f3f4f6;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 3.5rem 0 3rem;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            background: #e0edff;
+            color: #1d4ed8;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.75rem;
+        }
+
+        .badge span {
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 999px;
+            background: #22c55e;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.1rem, 3vw, 2.8rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+            color: #0f172a;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero-subtitle {
+            font-size: 1.02rem;
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+            max-width: 34rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        .hero-meta strong {
+            display: block;
+            color: #111827;
+        }
+
+        .hero-image {
+            position: relative;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            background: radial-gradient(circle at top left, #bfdbfe, #1d4ed8);
+            min-height: 260px;
+            box-shadow: 0 20px 45px rgba(15, 23, 42, 0.2);
+        }
+
+        .hero-image-inner {
+            position: absolute;
+            inset: 0;
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: #eff6ff;
+        }
+
+        .hero-tagline {
+            font-size: 1.05rem;
+            font-weight: 600;
+            max-width: 16rem;
+        }
+
+        .stats {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            min-width: 6rem;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 800;
+        }
+
+        .stat span {
+            font-size: 0.8rem;
+            color: #e5e7eb;
+        }
+
+        .hero-tag {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            border: 1px solid rgba(191, 219, 254, 0.7);
+            align-self: flex-start;
+            background: rgba(15, 23, 42, 0.35);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Sections */
+        section {
+            padding: 3.5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2.25rem;
+        }
+
+        .section-eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin-bottom: 0.35rem;
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-description {
+            max-width: 38rem;
+            margin: 0 auto;
+            color: #4b5563;
+            font-size: 0.98rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.75rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 1.25rem;
+            padding: 1.5rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.04);
+        }
+
+        .card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #111827;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #4b5563;
+            margin-bottom: 0.5rem;
+        }
+
+        .pill {
+            display: inline-flex;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            background: #eff6ff;
+            color: #1d4ed8;
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        ul.list {
+            list-style: none;
+            margin-top: 0.75rem;
+        }
+
+        ul.list li {
+            display: flex;
+            gap: 0.45rem;
+            font-size: 0.95rem;
+            color: #4b5563;
+            margin-bottom: 0.35rem;
+        }
+
+        ul.list li::before {
+            content: "•";
+            color: #2563eb;
+            font-weight: 900;
+        }
+
+        .highlight-box {
+            background: #e0f2fe;
+            border-radius: 1rem;
+            padding: 1.25rem;
+            font-size: 0.9rem;
+            color: #0f172a;
+            border: 1px solid #bfdbfe;
+        }
+
+        .highlight-box strong {
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.25rem;
+        }
+
+        .impact-item {
+            text-align: center;
+            padding: 1.1rem 1rem;
+            border-radius: 1rem;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+        }
+
+        .impact-item strong {
+            display: block;
+            font-size: 1.4rem;
+            color: #1d4ed8;
+            margin-bottom: 0.25rem;
+        }
+
+        .impact-item span {
+            font-size: 0.9rem;
+            color: #4b5563;
+        }
+
+        .cta {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: radial-gradient(circle at top left, #bfdbfe, #1d4ed8);
+            border-radius: 1.5rem;
+            color: #eff6ff;
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+        }
+
+        .cta h2 {
+            font-size: 1.7rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .cta p {
+            font-size: 0.98rem;
+            margin-bottom: 1.2rem;
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-small {
+            font-size: 0.8rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            border-top: 1px solid #e5e7eb;
+            padding: 2rem 0 1.75rem;
+            background: #f3f4f6;
+            font-size: 0.85rem;
+            color: #4b5563;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+            gap: 2.5rem;
+        }
+
+        .footer-title {
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.25rem;
+        }
+
+        .footer-contact p {
+            margin-bottom: 0.2rem;
+        }
+
+        .muted {
+            color: #9ca3af;
+            font-size: 0.8rem;
+            margin-top: 0.75rem;
+        }
+
+        @media (max-width: 900px) {
+
+            .hero-grid,
+            .two-column,
+            .grid-3,
+            .impact-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 2.5rem;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <!-- Header with Navigation -->
-    <header class="header" id="header">
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
-            <div class="container">
-                <div class="nav-wrapper">
-                    <div class="logo">
-                        <h1 class="logo-text">AYUBA FADDAH SOLID FOUNDATION</h1>
-                    </div>
-                    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    THE ROCK <span>FOUNDATION SCHOOLS OBUDU LTD</span>
+                </div>
+                <nav class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#programs">Programs</a>
+                    <a href="#impact">Impact</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <button class="btn btn-primary"
+                    onclick="document.getElementById('donate').scrollIntoView({behavior:'smooth'})">
+                    Donate Now
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <div class="badge">
+                    <span></span>
+                    Registered Nonprofit • Nigeria
+                </div>
+                <h1>
+                    Giving Every Child in <span>Obudu</span> a Chance to Stay in School
+                </h1>
+                <p class="hero-subtitle">
+                    THE ROCK FOUNDATION SCHOOLS OBUDU LTD is a nonprofit organization in Nigeria dedicated to
+                    supporting education, paying school fees, and providing learning materials for children from
+                    low-income families, so they do not have to drop out of school because of poverty.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary"
+                        onclick="document.getElementById('donate').scrollIntoView({behavior:'smooth'})">
+                        Sponsor a Child
                     </button>
-                    <ul class="nav-menu" id="nav-menu">
-                        <li><a href="#home" class="nav-link">Home</a></li>
-                        <li><a href="#about" class="nav-link">About Us</a></li>
-                        <li><a href="#mission" class="nav-link">Mission & Programs</a></li>
-                        <li><a href="#impact" class="nav-link">Impact</a></li>
-                        <li><a href="#help" class="nav-link">How You Can Help</a></li>
-                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <button class="btn btn-outline"
+                        onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+                        Learn More
+                    </button>
+                </div>
+                <div class="hero-meta">
+                    <div>
+                        <strong>Registered with CAC</strong>
+                        CAC Registration Number: 7014181
+                    </div>
+                    <div>
+                        <strong>Focus Area</strong>
+                        Education support • School fees • Learning materials
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="hero-image-inner">
+                    <div class="hero-tag">Obudu, Cross River State • Nigeria</div>
+                    <div class="hero-tagline">
+                        “No child should stay at home because of school fees.”
+                    </div>
+                    <div class="stats">
+                        <div class="stat">
+                            <strong>2025+</strong>
+                            <span>Vision: children supported across Obudu & beyond</span>
+                        </div>
+                        <div class="stat">
+                            <strong>3</strong>
+                            <span>Core programs: fees, materials, community support</span>
+                        </div>
+                        <div class="stat">
+                            <strong>You</strong>
+                            <span>Your partnership can keep a child in school</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">Who We Are</div>
+                <h2 class="section-title">About THE ROCK FOUNDATION SCHOOLS OBUDU LTD</h2>
+                <p class="section-description">
+                    We are a nonprofit educational foundation based in Obudu, Cross River State, Nigeria.
+                    Our mission is to remove financial barriers that prevent children from attending school.
+                    We work with families, schools, and community leaders to make education accessible,
+                    safe, and consistent for every child.
+                </p>
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <div class="card">
+                        <div class="pill">Our Mission</div>
+                        <h3>Education should be a right, not a privilege.</h3>
+                        <p>
+                            Many children in Nigeria are at risk of dropping out of school because their families
+                            cannot afford school fees, uniforms, or basic learning materials. At THE ROCK FOUNDATION
+                            SCHOOLS OBUDU LTD, we believe every child deserves the opportunity to learn, grow, and
+                            pursue their dreams – regardless of their economic background.
+                        </p>
+                        <p>
+                            By partnering with local schools and communities, we identify children in urgent need
+                            and provide targeted support that keeps them in the classroom and gives them hope for
+                            a better future.
+                        </p>
+                        <ul class="list">
+                            <li>Paying school fees for children from low-income households</li>
+                            <li>Providing uniforms, books, and essential learning materials</li>
+                            <li>Supporting community-based learning spaces and after-school programs</li>
+                            <li>Engaging parents and guardians on the value of continuous education</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="highlight-box">
+                        <strong>Legal & Registration Details</strong>
+                        <p><b>Organization Name:</b> THE ROCK FOUNDATION SCHOOLS OBUDU LTD</p>
+                        <p><b>Country:</b> Federal Republic of Nigeria</p>
+                        <p><b>Registration Authority:</b> Corporate Affairs Commission (CAC)</p>
+                        <p><b>CAC Registration Number:</b> 7014181</p>
+                        <p style="margin-top:0.5rem;">
+                            We operate as a nonprofit organization focused exclusively on charitable and educational
+                            purposes. Any support received is used to directly fund student education support and
+                            community learning initiatives.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs -->
+    <section id="programs">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">What We Do</div>
+                <h2 class="section-title">Our Core Programs</h2>
+                <p class="section-description">
+                    Our work centers on practical, direct support that keeps children in school and allows them
+                    to learn with dignity.
+                </p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <div class="pill">Program 01</div>
+                    <h3>School Fees Support</h3>
+                    <p>
+                        We provide partial or full payment of school fees for children whose families are unable
+                        to meet termly or yearly educational costs.
+                    </p>
+                    <ul class="list">
+                        <li>Identifying vulnerable children in partnership with schools</li>
+                        <li>Covering tuition and compulsory fees</li>
+                        <li>Priority for children at risk of dropping out</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="pill">Program 02</div>
+                    <h3>Uniforms & Learning Materials</h3>
+                    <p>
+                        Many children attend school without proper uniforms or learning tools. We step in to
+                        restore dignity and help them learn effectively.
+                    </p>
+                    <ul class="list">
+                        <li>School uniforms, sandals, and basic clothing</li>
+                        <li>Exercise books, textbooks, writing materials</li>
+                        <li>Simple school bags and supplies</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="pill">Program 03</div>
+                    <h3>Community Learning Support</h3>
+                    <p>
+                        Beyond fees, we support community-driven initiatives that create safe, inclusive
+                        learning environments for children in Obudu.
+                    </p>
+                    <ul class="list">
+                        <li>Support for community classroom spaces</li>
+                        <li>After-school tutoring and homework assistance</li>
+                        <li>Education awareness for parents and guardians</li>
                     </ul>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </section>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero" aria-label="Hero section">
-            <div class="hero-overlay"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <h2 class="hero-title">Providing Education for Underprivileged Children in Nigeria</h2>
-                    <p class="hero-subtitle">AYUBA FADDAH SOLID FOUNDATION works to remove financial barriers to education, ensuring every child has access to quality learning opportunities.</p>
-                    <div class="hero-buttons">
-                        <a href="#help" class="btn btn-primary">Support Our Work</a>
-                        <a href="#contact" class="btn btn-secondary">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Us Section -->
-        <section id="about" class="section about-section" aria-labelledby="about-heading">
-            <div class="container">
-                <h2 id="about-heading" class="section-title">About Us</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p class="lead">AYUBA FADDAH SOLID FOUNDATION is a registered nonprofit organization dedicated to transforming the lives of underprivileged children in Nigeria through education.</p>
-                        <p>We believe that education is a fundamental right that should be accessible to all children, regardless of their economic circumstances. Our foundation works tirelessly to bridge the gap between poverty and educational opportunity.</p>
-                    </div>
-                    <div class="about-details">
-                        <div class="detail-card">
-                            <h3>Organization Name</h3>
-                            <p>AYUBA FADDAH SOLID FOUNDATION</p>
-                        </div>
-                        <div class="detail-card">
-                            <h3>Registration Number</h3>
-                            <p>RC: 7849545</p>
-                        </div>
-                        <div class="detail-card">
-                            <h3>Country of Operation</h3>
-                            <p>Nigeria</p>
-                        </div>
-                        <div class="detail-card">
-                            <h3>Focus Area</h3>
-                            <p>Educational Support for Underprivileged Children</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Mission & Programs Section -->
-        <section id="mission" class="section mission-section" aria-labelledby="mission-heading">
-            <div class="container">
-                <h2 id="mission-heading" class="section-title">Our Mission & Programs</h2>
-                
-                <div class="mission-statement">
-                    <h3 class="subsection-title">Our Mission</h3>
-                    <div class="mission-text">
-                        <p>Our goal is to raise funds to provide classroom spaces, educational materials, and school enrollment support for children who are currently excluded from formal education due to poverty. Every donation helps us create learning opportunities - from community classroom funding to supporting school supplies for underprivileged pupils. Your contribution will directly support the AYUBA FADDAH SOLID FOUNDATION children education relief fund program for children in Nigeria.</p>
-                    </div>
-                </div>
-
-                <div class="programs-grid">
-                    <div class="program-card">
-                        <div class="program-icon" aria-hidden="true">🏫</div>
-                        <h3 class="program-title">Classroom Construction & Community Spaces</h3>
-                        <p class="program-description">We fund the construction and renovation of classroom spaces in underserved communities, creating safe and conducive learning environments where children can thrive academically.</p>
-                    </div>
-                    <div class="program-card">
-                        <div class="program-icon" aria-hidden="true">📚</div>
-                        <h3 class="program-title">Educational Materials & School Supplies</h3>
-                        <p class="program-description">We provide essential learning materials including textbooks, notebooks, writing instruments, and other school supplies to children from low-income families, ensuring they have the tools needed for success.</p>
-                    </div>
-                    <div class="program-card">
-                        <div class="program-icon" aria-hidden="true">🎓</div>
-                        <h3 class="program-title">School Enrollment Support</h3>
-                        <p class="program-description">We assist families in navigating the enrollment process and provide financial support to cover school fees and related costs, removing barriers that prevent children from accessing formal education.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Impact & Beneficiaries Section -->
-        <section id="impact" class="section impact-section" aria-labelledby="impact-heading">
-            <div class="container">
-                <h2 id="impact-heading" class="section-title">Our Impact</h2>
-                <p class="section-intro">Through the generous support of donors and partners, we are making a meaningful difference in the lives of children across Nigeria.</p>
-                
-                <div class="impact-grid">
-                    <div class="impact-card">
-                        <div class="impact-number" data-target="850">0</div>
-                        <div class="impact-label">Children Supported</div>
-                        <p class="impact-description">Children who have received educational support through our programs</p>
-                    </div>
-                    <div class="impact-card">
-                        <div class="impact-number" data-target="18">0</div>
-                        <div class="impact-label">Classrooms Funded</div>
-                        <p class="impact-description">Learning spaces created or renovated in underserved communities</p>
-                    </div>
-                    <div class="impact-card">
-                        <div class="impact-number" data-target="12">0</div>
-                        <div class="impact-label">Communities Reached</div>
-                        <p class="impact-description">Nigerian communities where we have established educational programs</p>
-                    </div>
-                </div>
-                
-                <!-- Note: These statistics represent our ongoing impact and are updated regularly -->
-                <p class="impact-note">* Statistics reflect our cumulative impact since program inception.</p>
-            </div>
-        </section>
-
-        <!-- How You Can Help Section -->
-        <section id="help" class="section help-section" aria-labelledby="help-heading">
-            <div class="container">
-                <h2 id="help-heading" class="section-title">How You Can Help</h2>
-                <p class="section-intro">Your support makes our work possible. There are several ways you can contribute to our mission of providing education for underprivileged children in Nigeria.</p>
-                
-                <div class="help-grid">
-                    <div class="help-card">
-                        <h3 class="help-title">Financial Donations</h3>
-                        <p>Every contribution, no matter the size, directly supports our programs. Your donations help us:</p>
-                        <ul class="help-list">
-                            <li>Build and renovate classroom spaces</li>
-                            <li>Purchase educational materials and school supplies</li>
-                            <li>Cover school enrollment fees for children in need</li>
-                            <li>Expand our reach to more communities</li>
-                        </ul>
-                        <p class="help-cta">Contact us to learn more about making a donation.</p>
-                    </div>
-                    <div class="help-card">
-                        <h3 class="help-title">Partnerships</h3>
-                        <p>We welcome partnerships with:</p>
-                        <ul class="help-list">
-                            <li>Schools and educational institutions</li>
-                            <li>Community leaders and organizations</li>
-                            <li>Corporate sponsors and foundations</li>
-                            <li>Other NGOs working in education</li>
-                        </ul>
-                        <p class="help-cta">Reach out to discuss partnership opportunities.</p>
-                    </div>
-                    <div class="help-card">
-                        <h3 class="help-title">Volunteering</h3>
-                        <p>Volunteers play a crucial role in our programs. Opportunities include:</p>
-                        <ul class="help-list">
-                            <li>Assisting with program implementation</li>
-                            <li>Helping with educational material distribution</li>
-                            <li>Supporting community outreach efforts</li>
-                            <li>Sharing expertise in education and development</li>
-                        </ul>
-                        <p class="help-cta">Contact us to explore volunteer opportunities.</p>
-                    </div>
-                </div>
-                
-                <div class="help-contact-box">
-                    <p class="help-contact-text"><strong>Ready to make a difference?</strong> Contact us to partner, support, or learn more about how you can help.</p>
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
-            <div class="container">
-                <h2 id="contact-heading" class="section-title">Contact Us</h2>
-                <p class="section-intro">We'd love to hear from you. Reach out to learn more about our programs, partnership opportunities, or ways to support our mission.</p>
-                
-                <div class="contact-wrapper">
-                    <div class="contact-info">
-                        <h3>Get in Touch</h3>
-                        <div class="contact-item">
-                            <h4>Email</h4>
-                            <p><a href="mailto:contact@ayubafaddahsolidfoundation.name.ng" class="contact-link">contact@ayubafaddahsolidfoundation.name.ng</a></p>
-                        </div>
-                        <div class="contact-item">
-                            <h4>Organization</h4>
-                            <p>AYUBA FADDAH SOLID FOUNDATION</p>
-                            <p>RC: 7849545</p>
-                            <p>Nigeria</p>
-                        </div>
-                    </div>
-                    
-                    <form class="contact-form" id="contact-form" aria-label="Contact form">
-                        <div class="form-group">
-                            <label for="name">Name <span class="required">*</span></label>
-                            <input type="text" id="name" name="name" required aria-required="true" placeholder="Your full name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" required aria-required="true" placeholder="your.email@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject <span class="required">*</span></label>
-                            <input type="text" id="subject" name="subject" required aria-required="true" placeholder="Message subject">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message <span class="required">*</span></label>
-                            <textarea id="message" name="message" rows="6" required aria-required="true" placeholder="Your message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
-                    </form>
-                </div>
-                
-                <div id="form-message" class="form-message" role="alert" aria-live="polite"></div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
+    <!-- Impact & Call to Action -->
+    <section id="impact">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>AYUBA FADDAH SOLID FOUNDATION</h3>
-                    <p>AYUBA FADDAH SOLID FOUNDATION is a nonprofit initiative focused on children's education in Nigeria.</p>
+            <div class="section-header">
+                <div class="section-eyebrow">Why It Matters</div>
+                <h2 class="section-title">Education Changes Everything</h2>
+                <p class="section-description">
+                    When a child stays in school, an entire family and community benefit. Your support can break
+                    the cycle of poverty and open doors to opportunity.
+                </p>
+            </div>
+
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <strong>₦45,000</strong>
+                    <span>can cover a term's school fees for one child (example estimate)</span>
                 </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p><a href="mailto:contact@ayubafaddahsolidfoundation.name.ng" class="footer-link">contact@ayubafaddahsolidfoundation.name.ng</a></p>
+                <div class="impact-item">
+                    <strong>₦12,500</strong>
+                    <span>can provide a full set of uniforms & learning materials</span>
                 </div>
-                <div class="footer-section">
-                    <h4>Registration</h4>
-                    <p>RC: 7849545</p>
-                    <p>Nigeria</p>
+                <div class="impact-item">
+                    <strong>₦28,000</strong>
+                    <span>can support a small group tutoring session for a full term</span>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; <span id="current-year"></span> AYUBA FADDAH SOLID FOUNDATION. All rights reserved.</p>
+
+            <div id="donate" style="margin-top: 2.5rem;">
+                <div class="cta">
+                    <h2>Partner With Us to Keep Children in School</h2>
+                    <p>
+                        Whether you are an individual, a family, a school, a faith community, or an organization,
+                        you can help us ensure that no child in Obudu is left behind because of school fees.
+                    </p>
+                    <div class="hero-actions" style="justify-content:center; margin-bottom:0.5rem;">
+                        <a href="#contact" class="btn btn-primary">Contact Us to Donate</a>
+                        <a href="#contact" class="btn btn-outline">Become a Partner</a>
+                    </div>
+                    <div class="cta-small">
+                        For bank transfer or in-kind support, please reach out via email or phone so we can share
+                        official details and issue acknowledgements.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div>
+                <div class="footer-title">Get in Touch</div>
+                <p>
+                    We welcome partnerships, donations, and volunteers who share our passion for education.
+                    Please contact us for more information, official documents, or collaboration opportunities.
+                </p>
+            </div>
+            <div class="footer-contact">
+                <p><span class="footer-title">Contact Details</span></p>
+                <p><b>Organization:</b> THE ROCK FOUNDATION SCHOOLS OBUDU LTD</p>
+                <p><b>Country:</b> Nigeria</p>
+                <p><b>CAC Registration Number:</b> 7014181</p>
+                <p><b>Email:</b> info@therockfoundationschoolsobudu.name.ng</p>
+                <p><b>Phone:</b> +234 704 085 0697</p>
+                <p><b>Address:</b> Obudu, Cross River State, Nigeria</p>
+            </div>
+        </div>
+        <div class="container" style="margin-top:1.5rem;">
+            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;">
+                <span>© <span id="year"></span> THE ROCK FOUNDATION SCHOOLS OBUDU LTD. All rights reserved.</span>
+                <span>Education Support • School Fees • Learning Materials</span>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
-</html>
 
+</html>
