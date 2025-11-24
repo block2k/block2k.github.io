@@ -3,744 +3,283 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>THE ROCK FOUNDATION SCHOOLS OBUDU LTD</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GROOTHOLD DEVELOPMENT INITIATIVES</title>
     <meta name="description"
-        content="The Rock Foundation Schools Obudu Ltd – a nonprofit organization in Nigeria providing education support, school fees assistance, and learning opportunities for children from low-income families." />
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        }
-
-        body {
-            color: #111827;
-            background-color: #f9fafb;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            background: rgba(249, 250, 251, 0.94);
-            border-bottom: 1px solid #e5e7eb;
-            backdrop-filter: blur(10px);
-        }
-
-        .container {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 0 1.25rem;
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0.75rem 0;
-        }
-
-        .logo {
-            font-weight: 800;
-            letter-spacing: 0.05em;
-            font-size: 1rem;
-            text-transform: uppercase;
-            color: #1d4ed8;
-        }
-
-        .logo span {
-            color: #111827;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-            font-size: 0.95rem;
-        }
-
-        .nav-links a {
-            color: #4b5563;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: #111827;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 999px;
-            padding: 0.6rem 1.4rem;
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            border: none;
-            transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #1d4ed8, #2563eb);
-            color: #f9fafb;
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 14px 34px rgba(37, 99, 235, 0.45);
-        }
-
-        .btn-outline {
-            border: 1px solid #d1d5db;
-            background: #ffffff;
-            color: #111827;
-        }
-
-        .btn-outline:hover {
-            background: #f3f4f6;
-        }
-
-        /* Hero */
-        .hero {
-            padding: 3.5rem 0 3rem;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.25rem 0.75rem;
-            border-radius: 999px;
-            font-size: 0.75rem;
-            background: #e0edff;
-            color: #1d4ed8;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 0.75rem;
-        }
-
-        .badge span {
-            width: 0.4rem;
-            height: 0.4rem;
-            border-radius: 999px;
-            background: #22c55e;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.1rem, 3vw, 2.8rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            margin-bottom: 1rem;
-            color: #0f172a;
-        }
-
-        .hero h1 span {
-            color: #2563eb;
-        }
-
-        .hero-subtitle {
-            font-size: 1.02rem;
-            color: #4b5563;
-            margin-bottom: 1.5rem;
-            max-width: 34rem;
-        }
-
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .hero-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            font-size: 0.85rem;
-            color: #6b7280;
-        }
-
-        .hero-meta strong {
-            display: block;
-            color: #111827;
-        }
-
-        .hero-image {
-            position: relative;
-            border-radius: 1.5rem;
-            overflow: hidden;
-            background: radial-gradient(circle at top left, #bfdbfe, #1d4ed8);
-            min-height: 260px;
-            box-shadow: 0 20px 45px rgba(15, 23, 42, 0.2);
-        }
-
-        .hero-image-inner {
-            position: absolute;
-            inset: 0;
-            padding: 1.75rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            color: #eff6ff;
-        }
-
-        .hero-tagline {
-            font-size: 1.05rem;
-            font-weight: 600;
-            max-width: 16rem;
-        }
-
-        .stats {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .stat {
-            min-width: 6rem;
-        }
-
-        .stat strong {
-            display: block;
-            font-size: 1.4rem;
-            font-weight: 800;
-        }
-
-        .stat span {
-            font-size: 0.8rem;
-            color: #e5e7eb;
-        }
-
-        .hero-tag {
-            font-size: 0.75rem;
-            padding: 0.25rem 0.75rem;
-            border-radius: 999px;
-            border: 1px solid rgba(191, 219, 254, 0.7);
-            align-self: flex-start;
-            background: rgba(15, 23, 42, 0.35);
-            backdrop-filter: blur(10px);
-        }
-
-        /* Sections */
-        section {
-            padding: 3.5rem 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 2.25rem;
-        }
-
-        .section-eyebrow {
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            font-size: 0.75rem;
-            color: #6b7280;
-            margin-bottom: 0.35rem;
-            font-weight: 600;
-        }
-
-        .section-title {
-            font-size: 1.7rem;
-            font-weight: 800;
-            color: #111827;
-            margin-bottom: 0.5rem;
-        }
-
-        .section-description {
-            max-width: 38rem;
-            margin: 0 auto;
-            color: #4b5563;
-            font-size: 0.98rem;
-        }
-
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1.75rem;
-        }
-
-        .card {
-            background: #ffffff;
-            border-radius: 1.25rem;
-            padding: 1.5rem;
-            border: 1px solid #e5e7eb;
-            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.04);
-        }
-
-        .card h3 {
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: #111827;
-        }
-
-        .card p {
-            font-size: 0.95rem;
-            color: #4b5563;
-            margin-bottom: 0.5rem;
-        }
-
-        .pill {
-            display: inline-flex;
-            padding: 0.2rem 0.6rem;
-            border-radius: 999px;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            background: #eff6ff;
-            color: #1d4ed8;
-            font-weight: 700;
-            margin-bottom: 0.35rem;
-        }
-
-        .two-column {
-            display: grid;
-            grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-            gap: 2.5rem;
-            align-items: start;
-        }
-
-        ul.list {
-            list-style: none;
-            margin-top: 0.75rem;
-        }
-
-        ul.list li {
-            display: flex;
-            gap: 0.45rem;
-            font-size: 0.95rem;
-            color: #4b5563;
-            margin-bottom: 0.35rem;
-        }
-
-        ul.list li::before {
-            content: "•";
-            color: #2563eb;
-            font-weight: 900;
-        }
-
-        .highlight-box {
-            background: #e0f2fe;
-            border-radius: 1rem;
-            padding: 1.25rem;
-            font-size: 0.9rem;
-            color: #0f172a;
-            border: 1px solid #bfdbfe;
-        }
-
-        .highlight-box strong {
-            display: block;
-            margin-bottom: 0.25rem;
-        }
-
-        .impact-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1.25rem;
-        }
-
-        .impact-item {
-            text-align: center;
-            padding: 1.1rem 1rem;
-            border-radius: 1rem;
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-        }
-
-        .impact-item strong {
-            display: block;
-            font-size: 1.4rem;
-            color: #1d4ed8;
-            margin-bottom: 0.25rem;
-        }
-
-        .impact-item span {
-            font-size: 0.9rem;
-            color: #4b5563;
-        }
-
-        .cta {
-            text-align: center;
-            padding: 2.5rem 2rem;
-            background: radial-gradient(circle at top left, #bfdbfe, #1d4ed8);
-            border-radius: 1.5rem;
-            color: #eff6ff;
-            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
-        }
-
-        .cta h2 {
-            font-size: 1.7rem;
-            margin-bottom: 0.6rem;
-        }
-
-        .cta p {
-            font-size: 0.98rem;
-            margin-bottom: 1.2rem;
-            max-width: 32rem;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-small {
-            font-size: 0.8rem;
-            opacity: 0.9;
-            margin-top: 0.5rem;
-        }
-
-        footer {
-            border-top: 1px solid #e5e7eb;
-            padding: 2rem 0 1.75rem;
-            background: #f3f4f6;
-            font-size: 0.85rem;
-            color: #4b5563;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-            gap: 2.5rem;
-        }
-
-        .footer-title {
-            font-weight: 700;
-            color: #111827;
-            margin-bottom: 0.25rem;
-        }
-
-        .footer-contact p {
-            margin-bottom: 0.2rem;
-        }
-
-        .muted {
-            color: #9ca3af;
-            font-size: 0.8rem;
-            margin-top: 0.75rem;
-        }
-
-        @media (max-width: 900px) {
-
-            .hero-grid,
-            .two-column,
-            .grid-3,
-            .impact-grid,
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero {
-                padding-top: 2.5rem;
-            }
-
-            .hero-image {
-                order: -1;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .cta {
-                padding: 2rem 1.5rem;
-            }
-        }
-    </style>
+        content="GROOTHOLD DEVELOPMENT INITIATIVES is a nonprofit organization in Nigeria focused on community development and long-term poverty alleviation." />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="nav">
-                <div class="logo">
-                    THE ROCK <span>FOUNDATION SCHOOLS OBUDU LTD</span>
-                </div>
-                <nav class="nav-links">
-                    <a href="#about">About</a>
-                    <a href="#programs">Programs</a>
-                    <a href="#impact">Impact</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-                <button class="btn btn-primary"
-                    onclick="document.getElementById('donate').scrollIntoView({behavior:'smooth'})">
-                    Donate Now
-                </button>
+    <header class="site-header">
+        <div class="container nav-container">
+            <div class="logo" aria-label="GROOTHOLD DEVELOPMENT INITIATIVES">
+                GROOTHOLD DEVELOPMENT INITIATIVES
             </div>
+
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#impact">Impact</a></li>
+                    <li><a href="#get-involved">Get Involved</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a class="btn btn-outline" href="#contact">Partner With Us</a>
+            </nav>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container hero-grid">
-            <div>
-                <div class="badge">
-                    <span></span>
-                    Registered Nonprofit • Nigeria
-                </div>
-                <h1>
-                    Giving Every Child in <span>Obudu</span> a Chance to Stay in School
-                </h1>
-                <p class="hero-subtitle">
-                    THE ROCK FOUNDATION SCHOOLS OBUDU LTD is a nonprofit organization in Nigeria dedicated to
-                    supporting education, paying school fees, and providing learning materials for children from
-                    low-income families, so they do not have to drop out of school because of poverty.
-                </p>
-                <div class="hero-actions">
-                    <button class="btn btn-primary"
-                        onclick="document.getElementById('donate').scrollIntoView({behavior:'smooth'})">
-                        Sponsor a Child
-                    </button>
-                    <button class="btn btn-outline"
-                        onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
-                        Learn More
-                    </button>
-                </div>
-                <div class="hero-meta">
-                    <div>
-                        <strong>Registered with CAC</strong>
-                        CAC Registration Number: 7014181
-                    </div>
-                    <div>
-                        <strong>Focus Area</strong>
-                        Education support • School fees • Learning materials
-                    </div>
-                </div>
-            </div>
-
-            <div class="hero-image">
-                <div class="hero-image-inner">
-                    <div class="hero-tag">Obudu, Cross River State • Nigeria</div>
-                    <div class="hero-tagline">
-                        “No child should stay at home because of school fees.”
-                    </div>
-                    <div class="stats">
-                        <div class="stat">
-                            <strong>2025+</strong>
-                            <span>Vision: children supported across Obudu & beyond</span>
-                        </div>
-                        <div class="stat">
-                            <strong>3</strong>
-                            <span>Core programs: fees, materials, community support</span>
-                        </div>
-                        <div class="stat">
-                            <strong>You</strong>
-                            <span>Your partnership can keep a child in school</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section id="about">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-eyebrow">Who We Are</div>
-                <h2 class="section-title">About THE ROCK FOUNDATION SCHOOLS OBUDU LTD</h2>
-                <p class="section-description">
-                    We are a nonprofit educational foundation based in Obudu, Cross River State, Nigeria.
-                    Our mission is to remove financial barriers that prevent children from attending school.
-                    We work with families, schools, and community leaders to make education accessible,
-                    safe, and consistent for every child.
-                </p>
-            </div>
-
-            <div class="two-column">
+    <main>
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="container hero-content">
                 <div>
-                    <div class="card">
-                        <div class="pill">Our Mission</div>
-                        <h3>Education should be a right, not a privilege.</h3>
-                        <p>
-                            Many children in Nigeria are at risk of dropping out of school because their families
-                            cannot afford school fees, uniforms, or basic learning materials. At THE ROCK FOUNDATION
-                            SCHOOLS OBUDU LTD, we believe every child deserves the opportunity to learn, grow, and
-                            pursue their dreams – regardless of their economic background.
-                        </p>
-                        <p>
-                            By partnering with local schools and communities, we identify children in urgent need
-                            and provide targeted support that keeps them in the classroom and gives them hope for
-                            a better future.
-                        </p>
-                        <ul class="list">
-                            <li>Paying school fees for children from low-income households</li>
-                            <li>Providing uniforms, books, and essential learning materials</li>
-                            <li>Supporting community-based learning spaces and after-school programs</li>
-                            <li>Engaging parents and guardians on the value of continuous education</li>
-                        </ul>
+                    <p class="eyebrow">Building foundations for sustainable community growth.</p>
+                    <h1 id="hero-title">Empowering communities to break the cycle of poverty.</h1>
+                    <p class="lead">
+                        GROOTHOLD DEVELOPMENT INITIATIVES is a nonprofit organization based in Nigeria dedicated to
+                        helping underserved communities build a more secure, dignified, and sustainable future. We work
+                        alongside local families, youth, and small businesses to unlock opportunities that lead to
+                        long-term economic independence.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn" href="#contact">Contact Our Team</a>
+                        <a class="btn btn-secondary" href="#about">Learn About Our Work</a>
+                    </div>
+                    <p class="support-line">Together, we can create lasting foundations for growth.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about" aria-labelledby="about-title">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Who We Are</p>
+                    <h2 id="about-title">About GROOTHOLD DEVELOPMENT INITIATIVES</h2>
+                </div>
+                <div class="about-grid">
+                    <div>
+                        <p>GROOTHOLD DEVELOPMENT INITIATIVES is a community-focused nonprofit organization committed to
+                            breaking the cycle of poverty in underserved communities across Nigeria. We believe that
+                            sustainable change begins when people are given the tools, knowledge, and support they need
+                            to transform their own lives.</p>
+                        <p>Rather than offering short-term relief only, we focus on long-term community development.
+                            Through micro-grants, skills training, financial literacy, and small business support, we
+                            help families and individuals build stable sources of income and greater economic
+                            resilience.</p>
+                        <p>By partnering with local leaders, grassroots groups, and development-minded supporters,
+                            GROOTHOLD DEVELOPMENT INITIATIVES strengthens the foundations of communities so they can
+                            grow, thrive, and create better opportunities for the next generation.</p>
+                        <div class="mission-vision">
+                            <div>
+                                <p class="statement">We empower underserved communities with skills, resources, and
+                                    opportunities to achieve long-term economic independence and sustainable growth.</p>
+                            </div>
+                            <div>
+                                <p class="statement">A Nigeria where every community has the foundation to grow, thrive,
+                                    and build a secure economic future.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Our Core Values</h3>
+                        <div class="values-grid">
+                            <div class="value-card">
+                                <h4>Integrity</h4>
+                                <p>We act with honesty and uphold strong ethical standards in all our decisions,
+                                    partnerships, and programs.</p>
+                            </div>
+                            <div class="value-card">
+                                <h4>Accountability</h4>
+                                <p>We are committed to transparency and responsible stewardship of every resource
+                                    entrusted to us.</p>
+                            </div>
+                            <div class="value-card">
+                                <h4>Community</h4>
+                                <p>We work hand-in-hand with local communities, listening first and building solutions
+                                    together.</p>
+                            </div>
+                            <div class="value-card">
+                                <h4>Sustainability</h4>
+                                <p>We design initiatives that create lasting impact, empowering people beyond short-term
+                                    assistance.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
+        <section id="programs" class="section light" aria-labelledby="programs-title">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">What We Do</p>
+                    <h2 id="programs-title">Our Programs</h2>
+                </div>
+                <p class="section-lead">Our initiatives are designed to tackle the root causes of poverty by equipping
+                    people with practical tools, skills, and support. Each program is developed with the realities of
+                    local communities in mind.</p>
+                <div class="cards-grid">
+                    <article class="card">
+                        <h3>Community Micro-Grant Support</h3>
+                        <p>This program provides small, targeted micro-grants to low-income families, women
+                            entrepreneurs, and community members who need a push to start or grow income-generating
+                            activities. We pair financial support with guidance to help beneficiaries use funds
+                            effectively and sustainably.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Skills Training &amp; Youth Empowerment</h3>
+                        <p>Through skills development workshops and mentorship, we equip young people with practical
+                            competencies such as vocational skills, basic digital literacy, and entrepreneurship. Our
+                            goal is to help youth become active contributors to their local economies and reduce
+                            unemployment.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Financial Literacy &amp; Family Budgeting</h3>
+                        <p>Many families struggle not only because of low income but also due to limited access to
+                            financial education. This program introduces simple, real-life tools for budgeting, saving,
+                            and managing debt, helping households make more informed financial decisions.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Small Business Support for Women</h3>
+                        <p>Women are often at the heart of their families and communities, yet face barriers to
+                            financial opportunities. We support women-led small businesses with training, coaching, and
+                            connections to local markets, helping them build stronger and more stable livelihoods.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="section" aria-labelledby="impact-title">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Progress</p>
+                    <h2 id="impact-title">Our Impact</h2>
+                </div>
+                <p class="section-lead">Even in the early stages of our work, we are committed to building a track
+                    record of real, measurable change in the communities we serve. The numbers below represent sample
+                    impact indicators that reflect the type of outcomes we aim to achieve as we grow.</p>
+                <div class="impact-grid" role="list">
+                    <div class="impact-card" role="listitem">
+                        <span class="impact-number">150+</span>
+                        <p>150+ households supported with economic empowerment initiatives</p>
+                    </div>
+                    <div class="impact-card" role="listitem">
+                        <span class="impact-number">80+</span>
+                        <p>80+ young people trained in practical skills and entrepreneurship</p>
+                    </div>
+                    <div class="impact-card" role="listitem">
+                        <span class="impact-number">20+</span>
+                        <p>20+ women-led small businesses strengthened through our programs</p>
+                    </div>
+                    <div class="impact-card" role="listitem">
+                        <span class="impact-number">12+</span>
+                        <p>12+ community-driven projects launched in partnership with local leaders</p>
+                    </div>
+                </div>
+                <p class="metrics-note">These figures are illustrative and will be updated as our programs expand and
+                    reach more communities.</p>
+            </div>
+        </section>
+
+        <section id="get-involved" class="section light" aria-labelledby="involved-title">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Take Action</p>
+                    <h2 id="involved-title">Get Involved</h2>
+                </div>
+                <p class="section-lead">Creating lasting change is only possible when committed partners, donors, and
+                    volunteers come together around a shared vision. There are several ways you can support GROOTHOLD
+                    DEVELOPMENT INITIATIVES and help build stronger communities.</p>
+                <div class="cards-grid involvement-grid">
+                    <article class="card">
+                        <h3>Partner With Us</h3>
+                        <p>We welcome collaboration with organizations, foundations, community groups, and socially
+                            responsible businesses that share our commitment to sustainable development. Together, we
+                            can design and scale initiatives that reach more people and create deeper impact.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Donate</h3>
+                        <p>Your financial support enables us to fund micro-grants, deliver training, and expand our
+                            community programs. Every contribution, no matter the size, helps us strengthen the
+                            foundations of economic security for families in need.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Volunteer &amp; Advocate</h3>
+                        <p>You can support our mission by sharing our story, offering your expertise, or volunteering
+                            your time where possible. Advocating for community-driven development and inclusive
+                            opportunities is a powerful way to help us reach more people.</p>
+                    </article>
+                </div>
+                <p class="support-line">To explore partnership or support opportunities, please reach out to our team
+                    through the contact form below.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact" aria-labelledby="contact-title">
+            <div class="container contact-grid">
                 <div>
-                    <div class="highlight-box">
-                        <strong>Legal & Registration Details</strong>
-                        <p><b>Organization Name:</b> THE ROCK FOUNDATION SCHOOLS OBUDU LTD</p>
-                        <p><b>Country:</b> Federal Republic of Nigeria</p>
-                        <p><b>Registration Authority:</b> Corporate Affairs Commission (CAC)</p>
-                        <p><b>CAC Registration Number:</b> 7014181</p>
-                        <p style="margin-top:0.5rem;">
-                            We operate as a nonprofit organization focused exclusively on charitable and educational
-                            purposes. Any support received is used to directly fund student education support and
-                            community learning initiatives.
-                        </p>
+                    <div class="section-header">
+                    <p class="eyebrow">Connect</p>
+                    <h2 id="contact-title">Contact Us</h2>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Programs -->
-    <section id="programs">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-eyebrow">What We Do</div>
-                <h2 class="section-title">Our Core Programs</h2>
-                <p class="section-description">
-                    Our work centers on practical, direct support that keeps children in school and allows them
-                    to learn with dignity.
-                </p>
-            </div>
-
-            <div class="grid-3">
-                <div class="card">
-                    <div class="pill">Program 01</div>
-                    <h3>School Fees Support</h3>
-                    <p>
-                        We provide partial or full payment of school fees for children whose families are unable
-                        to meet termly or yearly educational costs.
-                    </p>
-                    <ul class="list">
-                        <li>Identifying vulnerable children in partnership with schools</li>
-                        <li>Covering tuition and compulsory fees</li>
-                        <li>Priority for children at risk of dropping out</li>
+                    <p>If you are interested in partnering with us, supporting our work, or learning more about our
+                        programs, we would be glad to hear from you. Please use the contact information or form below to
+                        get in touch.</p>
+                    <ul class="contact-info">
+                        <li><strong>Email:</strong> <a href="mailto:contact@grootholddevelopmentinitiatives.name.ng">contact@grootholddevelopmentinitiatives.name.ng</a></li>
+                        <li><strong>Location:</strong> Plot 27 Green Haven Close, Gwarinpa Phase 2, Abuja 900108, Nigeria</li>
                     </ul>
                 </div>
-
-                <div class="card">
-                    <div class="pill">Program 02</div>
-                    <h3>Uniforms & Learning Materials</h3>
-                    <p>
-                        Many children attend school without proper uniforms or learning tools. We step in to
-                        restore dignity and help them learn effectively.
-                    </p>
-                    <ul class="list">
-                        <li>School uniforms, sandals, and basic clothing</li>
-                        <li>Exercise books, textbooks, writing materials</li>
-                        <li>Simple school bags and supplies</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <div class="pill">Program 03</div>
-                    <h3>Community Learning Support</h3>
-                    <p>
-                        Beyond fees, we support community-driven initiatives that create safe, inclusive
-                        learning environments for children in Obudu.
-                    </p>
-                    <ul class="list">
-                        <li>Support for community classroom spaces</li>
-                        <li>After-school tutoring and homework assistance</li>
-                        <li>Education awareness for parents and guardians</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Impact & Call to Action -->
-    <section id="impact">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-eyebrow">Why It Matters</div>
-                <h2 class="section-title">Education Changes Everything</h2>
-                <p class="section-description">
-                    When a child stays in school, an entire family and community benefit. Your support can break
-                    the cycle of poverty and open doors to opportunity.
-                </p>
-            </div>
-
-            <div class="impact-grid">
-                <div class="impact-item">
-                    <strong>₦45,000</strong>
-                    <span>can cover a term's school fees for one child</span>
-                </div>
-                <div class="impact-item">
-                    <strong>₦12,500</strong>
-                    <span>can provide a full set of uniforms & learning materials</span>
-                </div>
-                <div class="impact-item">
-                    <strong>₦28,000</strong>
-                    <span>can support a small group tutoring session for a full term</span>
-                </div>
-            </div>
-
-            <div id="donate" style="margin-top: 2.5rem;">
-                <div class="cta">
-                    <h2>Partner With Us to Keep Children in School</h2>
-                    <p>
-                        Whether you are an individual, a family, a school, a faith community, or an organization,
-                        you can help us ensure that no child in Obudu is left behind because of school fees.
-                    </p>
-                    <div class="hero-actions" style="justify-content:center; margin-bottom:0.5rem;">
-                        <a href="#contact" class="btn btn-primary">Contact Us to Donate</a>
-                        <a href="#contact" class="btn btn-outline">Become a Partner</a>
+                <form class="contact-form" aria-label="Contact form">
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="Full Name" required />
                     </div>
-                    <div class="cta-small">
-                        For bank transfer or in-kind support, please reach out via email or phone so we can share
-                        official details and issue acknowledgements.
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required />
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                    <p class="privacy-note">We respect your privacy and will only use your information to respond to
+                        your inquiry.</p>
+                </form>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Contact & Footer -->
-    <footer id="contact">
-        <div class="container footer-grid">
+    <footer class="site-footer">
+        <div class="container footer-content">
             <div>
-                <div class="footer-title">Get in Touch</div>
-                <p>
-                    We welcome partnerships, donations, and volunteers who share our passion for education.
-                    Please contact us for more information, official documents, or collaboration opportunities.
-                </p>
+                <p class="logo">GROOTHOLD DEVELOPMENT INITIATIVES</p>
+                <p>Community-focused nonprofit organization based in Nigeria.</p>
+                <p>&copy; <span id="year"></span> GROOTHOLD DEVELOPMENT INITIATIVES. All rights reserved.</p>
             </div>
-            <div class="footer-contact">
-                <p><span class="footer-title">Contact Details</span></p>
-                <p><b>Organization:</b> THE ROCK FOUNDATION SCHOOLS OBUDU LTD</p>
-                <p><b>Country:</b> Nigeria</p>
-                <p><b>CAC Registration Number:</b> 7014181</p>
-                <p><b>Email:</b> contact@therockfoundationobudu.name.ng</p>
-                <p><b>Address:</b> Obudu, Cross River State, Nigeria</p>
-            </div>
-        </div>
-        <div class="container" style="margin-top:1.5rem;">
-            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;">
-                <span>© <span id="year"></span> THE ROCK FOUNDATION SCHOOLS OBUDU LTD. All rights reserved.</span>
-                <span>Education Support • School Fees • Learning Materials</span>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#programs">Programs</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
     </footer>
 
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
+
