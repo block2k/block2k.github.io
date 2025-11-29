@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example: Homepage with Images</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Additional styles for image demo */
+    .demo-note {
+      background: #fff3cd;
+      border: 2px solid #ffc107;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    
+    .demo-note strong {
+      color: #856404;
+    }
+    
+    /* Image placeholder styles */
+    .image-placeholder {
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #1565c0;
+      font-weight: 600;
+      border: 2px dashed #64b5f6;
+    }
+    
+    .image-placeholder .icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+    
+    .image-placeholder .text {
+      font-size: 1.1rem;
+    }
+    
+    .image-placeholder .filename {
+      font-size: 0.9rem;
+      color: #1976d2;
+      margin-top: 0.5rem;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-note">
+    <strong>📸 FILE MẪU - Hướng dẫn sử dụng hình ảnh</strong><br>
+    File này chỉ để tham khảo. Các khung màu xanh là chỗ cần đặt hình ảnh.
+  </div>
+
+  <nav class="primary-nav">
+    <a class="brand-text" href="index.html">AGEBETTER INITIATIVE</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="get-involved.html">Get Involved</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="site-header" id="home">
+    <div class="container header-grid">
+      <div class="brand">
+        <!-- ============================================
+             LOGO IMAGE - Thay thế chữ "U" bằng logo
+             ============================================ -->
+        <div class="image-placeholder" style="width: 90px; height: 90px; border-radius: 36px;">
+          <div class="icon">🏢</div>
+        </div>
+        <div style="font-size: 0.8rem; color: #1565c0; margin-top: 0.5rem;">
+          📁 images/logo.png<br>
+          400x400px, &lt;100KB
+        </div>
+        
+        <div style="margin-top: 2rem;">
+          <p class="eyebrow">AGEBETTER INITIATIVE</p>
+          <h1>Building resilient communities across Nigeria</h1>
+          <p class="subtitle">
+            A registered Nigerian nonprofit organization working with local partners to create lasting solutions.
+          </p>
+          <div class="cta-group">
+            <a class="btn primary" href="get-involved.html">Support Our Work</a>
+            <a class="btn ghost" href="about.html">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================
+           HERO IMAGE - Hình chính trang chủ
+           ============================================ -->
+      <div>
+        <div class="image-placeholder">
+          <div class="icon">🖼️</div>
+          <div class="text">Hero Image</div>
+          <div class="filename">images/hero-image.jpg</div>
+          <div class="filename">1920x800px, &lt;500KB</div>
+        </div>
+        <div style="margin-top: 1rem; padding: 1rem; background: #f8fbff; border-radius: 8px;">
+          <p style="margin: 0; font-size: 0.9rem; color: #5c6c8a;">
+            <strong>💡 Gợi ý tìm kiếm Unsplash:</strong><br>
+            "nigerian community", "africa volunteers helping", "community development africa"
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section programs-preview">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">What We Do</p>
+          <h2>Comprehensive programs for sustainable change</h2>
+        </div>
+
+        <div class="card-grid">
+          <!-- ============================================
+               PROGRAM IMAGES - Một hình cho mỗi chương trình
+               ============================================ -->
+          
+          <!-- Program 1: Nutrition -->
+          <article>
+            <div class="image-placeholder" style="height: 200px;">
+              <div class="icon">🍲</div>
+              <div class="filename">images/programs/nutrition.jpg</div>
+            </div>
+            <div style="padding: 1rem;">
+              <h3>Nutrition Security Program</h3>
+              <p>
+                Community-based food distribution, agricultural training serving 5,000+ families.
+              </p>
+              <div style="margin-top: 0.5rem; padding: 0.5rem; background: #f0f9ff; border-radius: 4px; font-size: 0.85rem;">
+                🔍 Search: "food distribution africa", "community kitchen"
+              </div>
+            </div>
+          </article>
+
+          <!-- Program 2: Education -->
+          <article>
+            <div class="image-placeholder" style="height: 200px;">
+              <div class="icon">📚</div>
+              <div class="filename">images/programs/education.jpg</div>
+            </div>
+            <div style="padding: 1rem;">
+              <h3>Girls Education Initiative</h3>
+              <p>
+                Scholarship program and mentorship for 2,500+ girls with 98% retention rate.
+              </p>
+              <div style="margin-top: 0.5rem; padding: 0.5rem; background: #f0f9ff; border-radius: 4px; font-size: 0.85rem;">
+                🔍 Search: "african girls studying", "nigeria school classroom"
+              </div>
+            </div>
+          </article>
+
+          <!-- Program 3: Healthcare -->
+          <article>
+            <div class="image-placeholder" style="height: 200px;">
+              <div class="icon">🏥</div>
+              <div class="filename">images/programs/healthcare.jpg</div>
+            </div>
+            <div style="padding: 1rem;">
+              <h3>Mobile Healthcare Clinics</h3>
+              <p>
+                Free primary care and maternal health services reaching 38 rural communities.
+              </p>
+              <div style="margin-top: 0.5rem; padding: 0.5rem; background: #f0f9ff; border-radius: 4px; font-size: 0.85rem;">
+                🔍 Search: "mobile clinic africa", "doctor patient africa"
+              </div>
+            </div>
+          </article>
+
+          <!-- Program 4: Economic -->
+          <article>
+            <div class="image-placeholder" style="height: 200px;">
+              <div class="icon">💼</div>
+              <div class="filename">images/programs/economic.jpg</div>
+            </div>
+            <div style="padding: 1rem;">
+              <h3>Women's Economic Empowerment</h3>
+              <p>
+                Microenterprise training helping 600+ women achieve financial independence.
+              </p>
+              <div style="margin-top: 0.5rem; padding: 0.5rem; background: #f0f9ff; border-radius: 4px; font-size: 0.85rem;">
+                🔍 Search: "african women entrepreneur", "market vendor nigeria"
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: #f8fbff;">
+      <div class="container">
+        <div class="section-heading center">
+          <h2>📋 Hướng Dẫn Nhanh</h2>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <h3 style="color: #1f6feb; margin-top: 0;">Bước 1: Tải Hình Ảnh</h3>
+          <ol style="line-height: 1.8;">
+            <li>Vào <a href="https://unsplash.com" target="_blank" style="color: #1f6feb; font-weight: 600;">Unsplash.com</a></li>
+            <li>Tìm với từ khóa gợi ý (ở các khung xanh)</li>
+            <li>Chọn hình phù hợp → Click "Download free"</li>
+            <li>Chọn kích thước "Medium" hoặc "Large"</li>
+          </ol>
+
+          <h3 style="color: #1f6feb;">Bước 2: Tối Ưu Hình</h3>
+          <ol style="line-height: 1.8;">
+            <li>Vào <a href="https://tinypng.com" target="_blank" style="color: #1f6feb; font-weight: 600;">TinyPNG.com</a></li>
+            <li>Upload hình vừa tải</li>
+            <li>Download hình đã nén (giảm 70% dung lượng)</li>
+          </ol>
+
+          <h3 style="color: #1f6feb;">Bước 3: Đặt Vào Đúng Thư Mục</h3>
+          <ul style="line-height: 1.8;">
+            <li>Logo → <code style="background: #f0f4ff; padding: 0.2rem 0.5rem; border-radius: 4px;">images/logo.png</code></li>
+            <li>Hero → <code style="background: #f0f4ff; padding: 0.2rem 0.5rem; border-radius: 4px;">images/hero-image.jpg</code></li>
+            <li>Programs → <code style="background: #f0f4ff; padding: 0.2rem 0.5rem; border-radius: 4px;">images/programs/*.jpg</code></li>
+          </ul>
+
+          <h3 style="color: #1f6feb;">Bước 4: Cập Nhật HTML</h3>
+          <p>Mở file <strong>UPDATE-IMAGES.md</strong> và làm theo hướng dẫn copy/paste code.</p>
+
+          <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; margin-top: 2rem; border-radius: 4px;">
+            <strong>⚠️ Quan trọng:</strong> Đảm bảo hình có bản quyền miễn phí (từ Unsplash/Pexels) hoặc là ảnh tự chụp. Nếu dùng ảnh người thật, phải có consent form!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading center">
+          <h2>✅ Checklist Hình Ảnh</h2>
+        </div>
+
+        <div style="max-width: 600px; margin: 0 auto;">
+          <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 1rem;">
+            <h3 style="margin-top: 0; color: #1f6feb;">📸 Bắt Buộc (Priority 1)</h3>
+            <ul style="list-style: none; padding: 0;">
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">
+                <input type="checkbox" id="logo" style="margin-right: 0.5rem;">
+                <label for="logo">Logo (400x400px, &lt;100KB)</label>
+              </li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">
+                <input type="checkbox" id="hero" style="margin-right: 0.5rem;">
+                <label for="hero">Hero Image (1920x800px, &lt;500KB)</label>
+              </li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">
+                <input type="checkbox" id="prog1" style="margin-right: 0.5rem;">
+                <label for="prog1">Nutrition Program (800x600px)</label>
+              </li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">
+                <input type="checkbox" id="prog2" style="margin-right: 0.5rem;">
+                <label for="prog2">Education Program (800x600px)</label>
+              </li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">
+                <input type="checkbox" id="prog3" style="margin-right: 0.5rem;">
+                <label for="prog3">Healthcare Program (800x600px)</label>
+              </li>
+              <li style="padding: 0.5rem 0;">
+                <input type="checkbox" id="prog4" style="margin-right: 0.5rem;">
+                <label for="prog4">Economic Program (800x600px)</label>
+              </li>
+            </ul>
+          </div>
+
+          <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <h3 style="margin-top: 0; color: #5c6c8a;">📸 Khuyên Dùng (Priority 2)</h3>
+            <ul style="list-style: none; padding: 0;">
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">
+                <input type="checkbox" id="team1" style="margin-right: 0.5rem;">
+                <label for="team1">Team Photos (400x400px each)</label>
+              </li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid #e0e0e0;">
+                <input type="checkbox" id="about" style="margin-right: 0.5rem;">
+                <label for="about">About Banner (1920x600px)</label>
+              </li>
+              <li style="padding: 0.5rem 0;">
+                <input type="checkbox" id="stories" style="margin-right: 0.5rem;">
+                <label for="stories">Success Story Images (800x600px)</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container" style="text-align: center; padding: 2rem 0;">
+      <p style="margin: 0; color: #c9d6f2;">
+        <strong>📚 Đọc thêm:</strong> 
+        <a href="HUONG-DAN-HINH-ANH.md" style="color: #64b5f6;">HUONG-DAN-HINH-ANH.md</a> | 
+        <a href="UPDATE-IMAGES.md" style="color: #64b5f6;">UPDATE-IMAGES.md</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
